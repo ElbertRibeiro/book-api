@@ -1,0 +1,11 @@
+type Book {
+    isbn: String,
+    title: String!
+    subject: String!
+    author: Author!
+}
+
+input BookInput {
+    title: String!
+    subject: String!
+}
