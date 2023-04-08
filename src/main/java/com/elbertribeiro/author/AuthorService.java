@@ -3,6 +3,7 @@ package com.elbertribeiro.author;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AuthorService {
@@ -13,13 +14,10 @@ public class AuthorService {
     }
 
     public List<Author> list() {
-        return repository.findAll().stream().toList();
+        return repository.findAll();
     }
 
     public Author save(String name, String email) {
-        Author author = new Author();
-        author.setName(name);
-        author.setEmail(email);
-        return repository.save(author);
+        return Optional.of(repository.save(new Author(name, email))).orElseThrow();
     }
 }
