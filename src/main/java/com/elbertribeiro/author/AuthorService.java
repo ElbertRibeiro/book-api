@@ -12,11 +12,11 @@ public class AuthorService {
         this.repository = repository;
     }
 
-    public List<Author> list(){
+    public List<Author> list() {
         return repository.findAll().stream().toList();
     }
 
-    public Author saveAuthor(String name, String email) {
+    public Author save(String name, String email) {
         Author author = new Author();
         author.setName(name);
         author.setEmail(email);
