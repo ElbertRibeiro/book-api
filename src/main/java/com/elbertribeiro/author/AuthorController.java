@@ -18,7 +18,10 @@ public class AuthorController {
 
     @QueryMapping
     public List<AuthorDto> listAuthors() {
-        return service.list().stream().map(author -> new AuthorDto(author.getName(), author.getEmail())).toList();
+        return service.list()
+                .stream()
+                .map(author -> new AuthorDto(author.getName(), author.getEmail()))
+                .toList();
     }
 
     @MutationMapping
