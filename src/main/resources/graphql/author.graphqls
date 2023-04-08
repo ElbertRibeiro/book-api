@@ -10,6 +10,7 @@ type Author {
 
 type Query {
     listAuthors: [Author]
+    getAuthor(name: String): Author
 }
 
 type Mutation {

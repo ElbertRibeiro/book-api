@@ -20,4 +20,8 @@ public class AuthorService {
     public Author save(String name, String email) {
         return Optional.of(repository.save(new Author(name, email))).orElseThrow();
     }
+
+    public Author getAuthorByName(String name) {
+        return repository.findAuthorByName(name);
+    }
 }

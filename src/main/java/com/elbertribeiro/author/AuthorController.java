@@ -24,6 +24,13 @@ public class AuthorController {
                 .toList();
     }
 
+    @QueryMapping
+    public AuthorDto getAuthor(@Argument String name) {
+        return Optional.ofNullable(service.getAuthorByName(name))
+                .map(author -> new AuthorDto(author.getName(), author.getEmail()))
+                .orElseThrow();
+    }
+
     @MutationMapping
     public AuthorDto saveAuthor(@Argument AuthorDto author) {
         return Optional.ofNullable(service.save(author.name(), author.email()))

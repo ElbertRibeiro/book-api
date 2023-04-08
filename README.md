@@ -13,3 +13,5 @@ If Auto DevOps is not already enabled for this project, you can [turn it on](htt
 ![img.png](docs/salvar.png)
 
 ![img.png](docs/consultar-lista.png)
+
+![img.png](docs/consulta-nome.png)
