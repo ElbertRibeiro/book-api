@@ -1,5 +1,6 @@
 package com.elbertribeiro.author;
 
+import com.elbertribeiro.exception.ValidationException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +15,11 @@ public class AuthorService {
     }
 
     public List<Author> list() {
-        return repository.findAll();
+        return Optional.of(repository.findAll()
+                        .stream()
+                        .toList())
+                .filter(authors -> !authors.isEmpty())
+                .orElseThrow(() -> new ValidationException("A lista está vazia."));
     }
 
     public Author save(String name, String email) {
