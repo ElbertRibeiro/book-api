@@ -1,3 +1,3 @@
 package com.elbertribeiro.author;
 
-public record AuthorDto(String nome, String email) {}
+public record AuthorDto(String name, String email) {}

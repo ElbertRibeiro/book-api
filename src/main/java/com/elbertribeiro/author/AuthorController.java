@@ -13,7 +13,7 @@ public class AuthorController {
     }
 
     @QueryMapping
-    public String hello(@Argument AuthorDto author) {
-        return service.getNameAuthor(author.nome());
+    public Author saveAuthor(@Argument AuthorDto author) {
+        return service.saveAuthor(author.name(), author.email());
     }
 }

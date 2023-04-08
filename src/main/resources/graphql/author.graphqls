@@ -1,4 +1,9 @@
 input AuthorInput {
-    nome: String,
+    name: String,
+    email: String
+}
+
+type Author {
+    name: String,
     email: String
 }
