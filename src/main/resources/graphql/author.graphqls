@@ -7,3 +7,11 @@ type Author {
     name: String,
     email: String
 }
+
+type Query {
+    listAuthors: [Author]
+}
+
+type Mutation {
+    saveAuthor(author: AuthorInput): Author
+}
