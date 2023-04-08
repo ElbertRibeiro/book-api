@@ -1,0 +1,9 @@
+type Query {
+    listAuthors: [Author]
+    getAuthor(name: String): Author
+    hello: String
+}
+
+type Mutation {
+    saveAuthor(author: AuthorInput): Author
+}
