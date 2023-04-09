@@ -1,9 +1,3 @@
-package com.elbertribeiro.exception;
+package com.elbertribeiro.exception
 
-public class ValidationException extends RuntimeException {
-
-
-    public ValidationException(String message) {
-        super(message);
-    }
-}
+class ValidationException(message: String) : RuntimeException(message)
