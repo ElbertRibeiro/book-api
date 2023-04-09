@@ -1,6 +1,7 @@
 type Query {
     listAuthors: [Author]
     getAuthor(name: String): Author
+    listBook: [Book]
 }
 
 type Mutation {
