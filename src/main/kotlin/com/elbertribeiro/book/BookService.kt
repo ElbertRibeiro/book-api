@@ -3,8 +3,8 @@ package com.elbertribeiro.book
 import org.springframework.stereotype.Service
 
 @Service
-class BookService {
-    fun hello() : String {
-        return "Metodo"
+class BookService(val repository: BookRepository) {
+    fun save(title: String) : Book {
+        return repository.save(Book(title))
     }
 }

@@ -1,0 +1,7 @@
+input BookInput {
+    title: String
+}
+
+type Book {
+    title: String
+}
