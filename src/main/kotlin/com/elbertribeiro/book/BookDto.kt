@@ -1,4 +1,4 @@
-package com.elbertribeiro.book;
+package com.elbertribeiro.book
 
-public record BookDto(String title) {
-}
+@JvmRecord
+data class BookDto(val title: String)
